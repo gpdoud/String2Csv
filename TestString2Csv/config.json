@@ -1,0 +1,200 @@
+﻿[
+  {
+    "key": 1,
+    "field": "company_code",
+    "start": 0,
+    "length": 5,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 2,
+    "field": "plan_code",
+    "start": 5,
+    "length": 8,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 3,
+    "field": "source",
+    "start": 13,
+    "length": 5,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 4,
+    "field": "eas_account",
+    "start": 18,
+    "length": 10,
+    "lefttrim": 3,
+    "righttrim": 0,
+    "leadzerotrim": true
+  },
+  {
+    "key": 5,
+    "field": "sap_account",
+    "start": 28,
+    "length": 10,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": true
+  },
+  {
+    "key": 6,
+    "field": "profit_center",
+    "start": 38,
+    "length": 15,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 7,
+    "field": "policy_number",
+    "start": 53,
+    "length": 15,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 8,
+    "field": "tran_date_mm",
+    "start": 68,
+    "length": 2,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 9,
+    "field": "tran_date_dd",
+    "start": 70,
+    "length": 2,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 10,
+    "field": "tran_date_yyyy",
+    "start": 72,
+    "length": 4,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 11,
+    "field": "cal_date_mm",
+    "start": 76,
+    "length": 2,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 12,
+    "field": "cal_date_yyyy",
+    "start": 82,
+    "length": 4,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 13,
+    "field": "ref_id",
+    "start": 86,
+    "length": 20,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 14,
+    "field": "amount",
+    "start": 106,
+    "length": 15,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": true
+  },
+  {
+    "key": 15,
+    "field": "dc_ind",
+    "start": 121,
+    "length": 1,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 16,
+    "field": "description",
+    "start": 122,
+    "length": 50,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 17,
+    "field": "lob",
+    "start": 172,
+    "length": 15,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 18,
+    "field": "budget_center",
+    "start": 187,
+    "length": 15,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 19,
+    "field": "rein_company",
+    "start": 202,
+    "length": 15,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 20,
+    "field": "state",
+    "start": 217,
+    "length": 15,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 21,
+    "field": "tax_status",
+    "start": 232,
+    "length": 15,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 22,
+    "field": "memo_code",
+    "start": 247,
+    "length": 15,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  }
+]

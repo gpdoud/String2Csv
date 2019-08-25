@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TestString2Csv": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\repos\\ken\\String2CsvSolution\\TestString2Csv\\config.json\" \"C:\\repos\\ken\\String2CsvSolution\\TestString2Csv\\vue-gl.txt\""
+    }
+  }
+}
