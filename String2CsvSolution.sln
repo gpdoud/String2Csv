@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestString2Csv", "TestString2Csv\TestString2Csv.csproj", "{C4933762-D5FD-4DBF-B7D8-7EEDED09C5C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestString2Csv", "TestString2Csv\TestString2Csv.csproj", "{C4933762-D5FD-4DBF-B7D8-7EEDED09C5C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "String2CsvLib", "String2CsvLib\String2CsvLib.csproj", "{9839AB28-5433-4842-9F02-63135707E96E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "String2CsvLib", "String2CsvLib\String2CsvLib.csproj", "{9839AB28-5433-4842-9F02-63135707E96E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{747FC3B2-C2F1-463E-B3E4-1F540CE2151D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
