@@ -12,5 +12,10 @@ namespace String2CsvLib {
         public int LeftTrim;
         public int RightTrim;
         public bool LeadZeroTrim;
+        public List<Translate> Translations;
+    }
+    public struct Translate {
+        public char From;
+        public char To;
     }
 }

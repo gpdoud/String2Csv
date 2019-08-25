@@ -64,24 +64,6 @@
   },
   {
     "key": 8,
-    "field": "tran_date_mm",
-    "start": 68,
-    "length": 2,
-    "lefttrim": 0,
-    "righttrim": 0,
-    "leadzerotrim": false
-  },
-  {
-    "key": 9,
-    "field": "tran_date_dd",
-    "start": 70,
-    "length": 2,
-    "lefttrim": 0,
-    "righttrim": 0,
-    "leadzerotrim": false
-  },
-  {
-    "key": 10,
     "field": "tran_date_yyyy",
     "start": 72,
     "length": 4,
@@ -90,19 +72,37 @@
     "leadzerotrim": false
   },
   {
-    "key": 11,
-    "field": "cal_date_mm",
-    "start": 76,
+    "key": 9,
+    "field": "tran_date_mm",
+    "start": 68,
     "length": 2,
     "lefttrim": 0,
     "righttrim": 0,
     "leadzerotrim": false
   },
   {
-    "key": 12,
+    "key": 10,
+    "field": "tran_date_dd",
+    "start": 70,
+    "length": 2,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 11,
     "field": "cal_date_yyyy",
     "start": 82,
     "length": 4,
+    "lefttrim": 0,
+    "righttrim": 0,
+    "leadzerotrim": false
+  },
+  {
+    "key": 12,
+    "field": "cal_date_mm",
+    "start": 76,
+    "length": 2,
     "lefttrim": 0,
     "righttrim": 0,
     "leadzerotrim": false
@@ -132,7 +132,17 @@
     "length": 1,
     "lefttrim": 0,
     "righttrim": 0,
-    "leadzerotrim": false
+    "leadzerotrim": false,
+    "translations": [
+      {
+        "from": "+",
+        "to": "D"
+      },
+      {
+        "from": "-",
+        "to": "C"
+      }
+    ]
   },
   {
     "key": 16,
