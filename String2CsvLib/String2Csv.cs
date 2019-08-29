@@ -7,6 +7,7 @@ namespace String2CsvLib {
 
     public class String2Csv {
 
+        static Config config;
         static SortedDictionary<int, InputFormat> layout = null;
 
         /// <summary>
@@ -43,7 +44,7 @@ namespace String2CsvLib {
         /// <returns>A string with fields comma separated</returns>
         public string ParseLine2Csv(string line) {
             // collection to hold individual fields
-            var fields = new List<string>();
+            var fields = new SortedDictionary<int, string>();
             // iterate through the field descriptions layout dictionary 
             // returning keys in sorted order.
             // each key points field description on what to extract from
@@ -52,7 +53,7 @@ namespace String2CsvLib {
                 var inf = layout[key];
                 // if the line is too short, remaining fields return empty string
                 if(inf.Start + inf.Length > line.Length) {
-                    fields.Add(string.Empty);
+                    fields.Add(inf.OutOrder, string.Empty);
                     continue;
                 }
                 // extract the field
@@ -63,10 +64,10 @@ namespace String2CsvLib {
                 // optionally perform multiple string replacement from x to y
                 fld = Translate(fld, inf.Translations);
                 // add to collection
-                fields.Add(fld);
+                fields.Add(inf.OutOrder, fld);
             }
             // return the collection as a string of comma separated fields 
-            return string.Join(',', fields);
+            return string.Join(',', fields.Values);
         }
         private string Trim(string field, int LeftTrim, int RightTrim, bool LeadZeroTrim) {
             var fld = field.Trim();
@@ -96,21 +97,25 @@ namespace String2CsvLib {
                 // read the contents of the json config file
                 var json = ss.ReadToEnd();
                 // turn the text into a json object with a collection of field definitions
-                var items = Newtonsoft.Json.JsonConvert.DeserializeObject<List<InputFormat>>(json);
+                var config = Newtonsoft.Json.JsonConvert.DeserializeObject<Config>(json);
                 // load the field definitions into the layout sorted dictionary
-                LoadDictionary(items);
+                LoadDictionary(config);
             }
         }
         /// <summary>
         /// Loads a field spec into the sorted dictionary
         /// </summary>
         /// <param name="items">A field spec in json format.</param>
-        private void LoadDictionary(List<InputFormat> items) {
+        private void LoadDictionary(Config cfg) {
+            config = new Config();
+            config.NbrDictionaryLookupKeys = cfg.NbrDictionaryLookupKeys;
+            config.InputFormats = cfg.InputFormats;
             layout = new SortedDictionary<int, InputFormat>();
-            foreach(var item in items) {
+            foreach(var item in config.InputFormats) {
                 var infmt = new InputFormat() {
                     Key = item.Key,
                     Field = item.Field,
+                    OutOrder = item.OutOrder,
                     Start = item.Start,
                     Length = item.Length,
                     LeftTrim = item.LeftTrim,
