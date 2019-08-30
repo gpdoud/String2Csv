@@ -2,9 +2,9 @@
   "nbrDictionaryLookupKeys": 2,
   "inputFormats": [
     {
-      "key": 1,
+      "key": 4,
       "field": "company_code",
-      "outorder": 1,
+      "outorder": 8,
       "start": 0,
       "length": 5,
       "lefttrim": 0,
@@ -14,7 +14,7 @@
     {
       "key": 2,
       "field": "plan_code",
-      "outorder": 2,
+      "outorder": 9,
       "start": 5,
       "length": 8,
       "lefttrim": 0,
@@ -24,7 +24,7 @@
     {
       "key": 3,
       "field": "source",
-      "outorder": 3,
+      "outorder": 10,
       "start": 13,
       "length": 5,
       "lefttrim": 0,
@@ -32,9 +32,9 @@
       "leadzerotrim": false
     },
     {
-      "key": 4,
+      "key": 1,
       "field": "eas_account",
-      "outorder": 4,
+      "outorder": 11,
       "start": 18,
       "length": 10,
       "lefttrim": 3,
@@ -44,7 +44,7 @@
     {
       "key": 5,
       "field": "sap_account",
-      "outorder": 5,
+      "outorder": 12,
       "start": 28,
       "length": 10,
       "lefttrim": 3,
@@ -75,7 +75,7 @@
       "key": 8,
       "field": "tran_date_yyyy",
       "start": 72,
-      "outorder": 8,
+      "outorder": 1,
       "length": 4,
       "lefttrim": 0,
       "righttrim": 0,
@@ -84,7 +84,7 @@
     {
       "key": 9,
       "field": "tran_date_mm",
-      "outorder": 9,
+      "outorder": 2,
       "start": 68,
       "length": 2,
       "lefttrim": 0,
@@ -94,7 +94,7 @@
     {
       "key": 10,
       "field": "tran_date_dd",
-      "outorder": 10,
+      "outorder": 3,
       "start": 70,
       "length": 2,
       "lefttrim": 0,
@@ -104,7 +104,7 @@
     {
       "key": 11,
       "field": "cal_date_yyyy",
-      "outorder": 11,
+      "outorder": 4,
       "start": 82,
       "length": 4,
       "lefttrim": 0,
@@ -114,7 +114,7 @@
     {
       "key": 12,
       "field": "cal_date_mm",
-      "outorder": 12,
+      "outorder": 5,
       "start": 76,
       "length": 2,
       "lefttrim": 0,

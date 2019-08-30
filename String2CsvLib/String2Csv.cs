@@ -7,8 +7,12 @@ namespace String2CsvLib {
 
     public class String2Csv {
 
-        static Config config;
-        static SortedDictionary<int, InputFormat> layout = null;
+        Config config;
+        SortedDictionary<int, InputFormat> layout = null;
+        FieldRequired _FieldRequired = new FieldRequired();
+
+        // provide ability to load from another class
+        public FieldRequired FieldRequired { get { return _FieldRequired; } }
 
         /// <summary>
         /// Parses an file of fixed-format text lines into a file of 
@@ -45,6 +49,10 @@ namespace String2CsvLib {
         public string ParseLine2Csv(string line) {
             // collection to hold individual fields
             var fields = new SortedDictionary<int, string>();
+            // create a dictionary keyed by the field name with
+            // the value being the outOrder field. this so that
+            // the field can be blanked out if it is not required
+            var eas_account = string.Empty;
             // iterate through the field descriptions layout dictionary 
             // returning keys in sorted order.
             // each key points field description on what to extract from
@@ -63,9 +71,20 @@ namespace String2CsvLib {
                 fld = Trim(fld, inf.LeftTrim, inf.RightTrim, inf.LeadZeroTrim);
                 // optionally perform multiple string replacement from x to y
                 fld = Translate(fld, inf.Translations);
+                // if this field is the eas_account, save it
+                if(inf.Field.Equals("eas_account")) {
+                    eas_account = fld;
+                }
+                // check if this field is required
+                if(!FieldRequired.IsRequired(new Key { EasAccount = eas_account, Field = inf.Field })) {
+                    fld = string.Empty;
+                }
                 // add to collection
                 fields.Add(inf.OutOrder, fld);
             }
+            // the entire line has been extracted. Check whether some fields
+            // are not required and should be changed to a empty string
+            
             // return the collection as a string of comma separated fields 
             return string.Join(',', fields.Values);
         }

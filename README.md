@@ -7,8 +7,9 @@ The configuration file requires a definition for each field that is to be extrac
 
 | Parameter    | Type  | Required | Description |
 | ---          | ---   | ---      | ---         |
-| Key          | int   | Yes      | Defines the order of fields in CSV file |
+| Key          | int   | Yes      | Defines unique identifier for fields in input file |
 | Field        | str   | No       | Description of field (not used at runtime) |
+| OutOrder     | int   | Yes      | Defines the order that fields will be in CSV file
 | Start        | int   | Yes      | Starting position of field in input |
 | Length       | int   | Yes      | Number of chars of the input |
 | LeftTrim     | int   | No       | Remove the first _n_ chars from the field |
@@ -25,6 +26,7 @@ Example configuration file
   {
     "key": 1,
     "field": "code",
+    "outorder": 2,
     "start": 0,
     "length": 5,
     "lefttrim": 0,
@@ -34,6 +36,7 @@ Example configuration file
   {
     "key": 2,
     "field": "account",
+    "outorder": 1,
     "start": 18,
     "length": 10,
     "lefttrim": 3,
@@ -43,6 +46,7 @@ Example configuration file
   {
     "key": 3,
     "field": "amount",
+    "outorder": 4,
     "start": 106,
     "length": 15,
     "lefttrim": 0,
@@ -52,6 +56,7 @@ Example configuration file
   {
     "key": 4,
     "field": "operator",
+    "outorder": 3,
     "start": 121,
     "length": 1,
     "lefttrim": 0,
