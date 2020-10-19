@@ -18,6 +18,9 @@ namespace TestString2Csv {
             //sc.FieldRequired.Add("5130045", "company_code", false);
             //sc.FieldRequired.Add("1154015", "company_code", false);
             //sc.FieldRequired.Add("5130050", "company_code", false);
+            //sc.FieldRequired.Add("5130045", "tran_date_yyyy", false);
+            //sc.FieldRequired.Add("1154015", "tran_date_yyyy", false);
+            //sc.FieldRequired.Add("5130050", "tran_date_yyyy", false);
         }
         static void Main(string[] args) {
             Run(args);
